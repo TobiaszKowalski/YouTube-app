@@ -2,11 +2,12 @@ import React from 'react';
 
 const SearchBar = (props) =>{
 
-    let handleChange = (e) =>{
-        props.handleChange(e.target.value)
+    let handleChange = (event) =>{
+        props.handleChange(event.target.value)
     }
     
-    let handleSubmit = (props) => {
+    let handleSubmit = (e) => {
+        e.preventDefault();
         props.handleSubmit(props.searchTerm)
     }
 

@@ -2,6 +2,7 @@ import youtube from '../../API/youtube';
 
 const SET_SEARCH_VALUE = 'SET_SEARCH_VALUE';
 const SEND_QUERY = 'SEND_QUERY';
+const KEY = 'AIzaSyAKhz4y6iop6gD_LCTJ2XdiF9WxwP9FFDw';
 
 const initialState = {
     videos: [],
@@ -21,18 +22,25 @@ export const sendQuery = (searchTerm) => ({
 const searchBarReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_SEARCH_VALUE:
+            //console.log(state.searchTerm)
             return {
                 ...state,
                 searchTerm: action.payload,
             }
         case SEND_QUERY:
-            const handleSubmit = async (searchTerm) => {
-                const response = await youtube.get('/search', {
+            const handleSubmit = async (searchTerm = action.payload) => {
+                const response = await youtube.get('search', {
                     params: {
-                        q: searchTerm
+                        key: KEY,
+                        type: 'video',
+                        part: 'snippet',
+                        maxResults: 15,
+                        q: searchTerm,
                     }
                 })
-                state.videos.push(response.data.items)
+                console.log(state)
+                console.log(response.data.items)
+                //state.videos.push(response.data.items)
             }
             handleSubmit(action.payload)
             return {
