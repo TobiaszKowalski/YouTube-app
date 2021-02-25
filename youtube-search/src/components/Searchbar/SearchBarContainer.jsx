@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { setSearchValue, sendQuery } from '../../store/reducers/searchBarReducer'
+import { setSearchValue, getVideosThunkCreator } from '../../store/reducers/searchBarReducer'
 import SearchBar from './SearchBar';
 
 let mapStateToProps = (state) => {
@@ -15,8 +15,11 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(setSearchValue(searchValue))
         },
         handleSubmit: (searchTerm) => {
-            dispatch(sendQuery(searchTerm))
+            dispatch(getVideosThunkCreator(searchTerm))
         }
+        /*handleSubmit: (searchTerm) => {
+            dispatch(sendQuery(searchTerm))
+        }*/
     }
 }
 
