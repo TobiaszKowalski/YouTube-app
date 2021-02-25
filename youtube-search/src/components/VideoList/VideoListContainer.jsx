@@ -4,16 +4,16 @@ import VideoList from './VideoList';
 
 let mapStateToProps = (state) => {
     return {
-        
+        videos: state.searchBarReducer.videos
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
+/*let mapDispatchToProps = (dispatch) => {
     return {
  
     }
-}
+}*/
 
-const VideoListContainer = connect(mapStateToProps, mapDispatchToProps)(VideoList);
+const VideoListContainer = connect(mapStateToProps)(VideoList);
 
 export default VideoListContainer;

@@ -3,9 +3,9 @@ import React from 'react';
 const VideoItem = (props) => {
     return (
         <div>
-            <img src={video.snippet.thumbnails.medium.url} alt={video.snippet.description} />
+            <img src={props.video.snippet.thumbnails.medium.url} alt={props.video.snippet.description} />
             <div>
-                <div>{video.snippet.title}</div>
+                <div>{props.video.snippet.title}</div>
             </div>
         </div>
     )
