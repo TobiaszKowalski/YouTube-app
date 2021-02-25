@@ -4,8 +4,9 @@ import { setSearchValue, getVideosThunkCreator } from '../../store/reducers/sear
 import SearchBar from './SearchBar';
 
 let mapStateToProps = (state) => {
+    console.log(state)
     return {
-        searchTerm: state.searchTerm
+        searchTerm: state.searchBarReducer.searchTerm
     }
 }
 
