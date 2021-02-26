@@ -4,11 +4,13 @@ const SearchBar = (props) =>{
 
     let handleChange = (event) =>{
         props.handleChange(event.target.value)
+        console.log(event.target.value)
     }
     
     let handleSubmit = (e) => {
         e.preventDefault();
         props.handleSubmit(props.searchTerm)
+        console.log(props.searchTerm)
     }
 
     return (
