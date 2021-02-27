@@ -1,13 +1,30 @@
 import React from 'react';
+import {Grid, Paper, Typography, Container} from '@material-ui/core';
 
 const VideoItem = (props) => {
+    let videoSrc = `https://www.youtube.com/embed/${props.video.id.videoId}`
     return (
-        <div>
-            <img src={props.video.snippet.thumbnails.medium.url} alt={props.video.snippet.description} />
-            <div>
-                <div>{props.video.snippet.title}</div>
-            </div>
-        </div>
+        <Grid justify = 'center' container>
+            <Grid container item spacing={2}>
+                <Paper elevation={6} style = {{padding: '10px'}} >
+                    <img src={props.video.snippet.thumbnails.medium.url} alt='' />  
+                    <Typography variant = 'subtitle1'>
+                        <a href={videoSrc} target='_blank'>
+                            {props.video.snippet.title}
+                        </a>
+                    </Typography>
+                    <Typography variant = 'subtitle1'>
+                        {props.video.snippet.channelTitle}
+                    </Typography>
+                    <Typography variant = 'subtitle1'>
+                        <time>{props.video.snippet.publishedAt}</time>
+                    </Typography>
+                    <Typography variant = 'subtitle1'>
+                        {props.video.snippet.description}
+                    </Typography>
+                </Paper>
+            </Grid>
+        </Grid>
     )
 }
 
