@@ -1,4 +1,5 @@
 import React from 'react';
+import {Paper, TextField} from '@material-ui/core';
 
 const SearchBar = (props) =>{
 
@@ -14,13 +15,11 @@ const SearchBar = (props) =>{
     }
 
     return (
-        <div>
+        <Paper elevation={6} style = {{padding: '25px'}}>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <input placeholder='Search video' onChange={handleChange} />
-                </div>
+                <TextField fullWidth label='Search video' onChange={handleChange}/>
             </form>
-        </div>
+        </Paper>
     )
 }
 

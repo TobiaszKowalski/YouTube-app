@@ -18,9 +18,6 @@ let mapDispatchToProps = (dispatch) => {
         handleSubmit: (searchTerm) => {
             dispatch(getVideosThunkCreator(searchTerm))
         }
-        /*handleSubmit: (searchTerm) => {
-            dispatch(sendQuery(searchTerm))
-        }*/
     }
 }
 
