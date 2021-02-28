@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid, Paper, Typography} from '@material-ui/core';
 import {PermIdentity, DateRange} from '@material-ui/icons';
+import './VideoItem.css';
 
 const VideoItem = (props) => {
     let videoSrc = `https://www.youtube.com/watch/${props.video.id.videoId}`
@@ -8,19 +9,19 @@ const VideoItem = (props) => {
     return (
         <Grid justify = 'center' container>
             <Grid container item spacing={2}>
-                <Paper align={'center'} elevation={6} style = {{padding: '10px', height: '60vh'}}>
+                <Paper className='wrapper' align={'center'} elevation={6}>
                     <img src={props.video.snippet.thumbnails.medium.url} alt='' />  
-                    <Typography variant = 'subtitle1'>
-                        <a style = {{color: '#673AB7'}} href={videoSrc} target='_blank'>
+                    <Typography className='link'  variant = 'subtitle1'>
+                        <a href={videoSrc} target='_blank'>
                             {props.video.snippet.title}
                         </a>
                     </Typography>
                     <Typography variant = 'subtitle1'>
-                        <Grid container >
+                        <Grid container>
                             <Grid item xs={4}>
                                 <PermIdentity />
                             </Grid>
-                            <Grid item xs={8}>
+                            <Grid align='left' item xs={8}>
                                 <Typography noWrap>
                                     {props.video.snippet.channelTitle}
                                 </Typography>
@@ -28,7 +29,7 @@ const VideoItem = (props) => {
                             <Grid item xs={4}>
                                 <DateRange />
                             </Grid>
-                            <Grid item xs={8}>
+                            <Grid align='left' item xs={8}>
                                 <time>{timeSnippet}</time>
                             </Grid>
                         </Grid>

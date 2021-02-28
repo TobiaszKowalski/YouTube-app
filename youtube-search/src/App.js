@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid} from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import SearchBarContainer from './components/Searchbar/SearchBarContainer';
 import VideoListContainer from './components/VideoList/VideoListContainer';
 
