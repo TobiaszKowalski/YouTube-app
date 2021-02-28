@@ -17,12 +17,21 @@ const VideoList = (props) => {
         {width: 1200, itemsToShow: 4},
     ]
     const itemPadding = [20];
-    
-    return (
-        <Grid>
-            <Carousel showArrows={false} itemPadding={itemPadding} breakPoints={breakPoints}>{renderedVideos}</Carousel>
-        </Grid>
-    )
+
+    if (props.videos.length === 0) {
+        return (
+            <Grid></Grid>
+        )
+    } else {
+        return (
+            <Grid>
+                <Carousel showArrows={false} itemPadding={itemPadding} breakPoints={breakPoints}>       
+                    {renderedVideos}
+                </Carousel>
+            </Grid>
+        )
+    }
+
 }
 
 export default VideoList;
