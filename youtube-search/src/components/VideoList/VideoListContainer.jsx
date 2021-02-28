@@ -8,11 +8,6 @@ let mapStateToProps = (state) => {
     }
 }
 
-/*let mapDispatchToProps = (dispatch) => {
-    return {
- 
-    }
-}*/
 
 const VideoListContainer = connect(mapStateToProps)(VideoList);
 

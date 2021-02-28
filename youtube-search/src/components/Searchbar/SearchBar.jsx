@@ -22,5 +22,5 @@ const SearchBar = (props) =>{
         </Paper>
     )
 }
-//<input placeholder='Search video' onChange={handleChange} />
+
 export default SearchBar;

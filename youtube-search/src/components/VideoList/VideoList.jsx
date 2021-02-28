@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import VideoItem from './VideoItem/VideoItem';
-import {Grid} from '@material-ui/core';
+import {Grid, Paper, Typography} from '@material-ui/core';
 
 const VideoList = (props) => {
 

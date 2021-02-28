@@ -14,22 +14,6 @@ export const setSearchValue =(searchValue) => ({
     payload: searchValue,
 })
 
-/*export const sendQuery = (searchTerm) => {
-    const handleSubmit = async (searchTerm) => {
-             await youtube.get('search', {
-            params: {
-                key: KEY,
-                type: 'video',
-                part: 'snippet',
-                maxResults: 15,
-                q: searchTerm,
-            }
-        }).then((response) => {
-            updateVideos(response.data.items)
-        })
-    }
-    handleSubmit(searchTerm);
-}*/
 
 const updateVideos = (data) => {
     return {type: UPDATE_VIDEOS, payload: data}
@@ -59,7 +43,6 @@ const searchBarReducer = (state = initialState, action) => {
                 searchTerm: action.payload,
             }
         case UPDATE_VIDEOS:
-            //console.log(action.payload)
             return {
                 ...state,
                 videos: action.payload
