@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/YouTube-app/static/css/main.c328005f.chunk.css",
-    "main.js": "/YouTube-app/static/js/main.4ae0fff4.chunk.js",
-    "main.js.map": "/YouTube-app/static/js/main.4ae0fff4.chunk.js.map",
+    "main.js": "/YouTube-app/static/js/main.777765b9.chunk.js",
+    "main.js.map": "/YouTube-app/static/js/main.777765b9.chunk.js.map",
     "runtime-main.js": "/YouTube-app/static/js/runtime-main.b44da918.js",
     "runtime-main.js.map": "/YouTube-app/static/js/runtime-main.b44da918.js.map",
     "static/js/2.eb173417.chunk.js": "/YouTube-app/static/js/2.eb173417.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.b44da918.js",
     "static/js/2.eb173417.chunk.js",
     "static/css/main.c328005f.chunk.css",
-    "static/js/main.4ae0fff4.chunk.js"
+    "static/js/main.777765b9.chunk.js"
   ]
 }
